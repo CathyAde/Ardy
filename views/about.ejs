@@ -1,0 +1,34 @@
+<!-- views/about.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de moi</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h1>À propos de moi</h1>
+        <div class="form-section">
+            <div class="form-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Études</h3>
+                <p>Description de vos études.</p>
+            </div>
+            <div class="form-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Compétences</h3>
+                <p>Description de vos compétences.</p>
+            </div>
+            <div class="form-item">
+                <i class="fas fa-heart"></i>
+                <h3>Passions</h3>
+                <p>Description de vos passions.</p>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
