@@ -1,4 +1,44 @@
 <!-- views/partials/footer.ejs -->
+<script>
+const buttons = document.querySelectorAll("[data-popup]");
+const closeButtons = document.querySelectorAll("[data-close]");
+
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      popup.style.display = "flex";}}
+
+function closePopups() {
+    document.querySelectorAll(".popup").forEach(popup => {
+      popup.style.display = "none";});}
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+    const popupId = button.getAttribute("data-popup");
+    openPopup(popupId);  });});
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", closePopups);});
+
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePopups();
+    }
+});
+
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+
+</script>
+
 <footer>
-    <p>&copy; 2024 [Votre Nom]. Tous droits réservés.</p>
-</footer>
+    <p style="color: white;">&copy; 2024 [Ardy OCKANDJI, BUT3 R&T]. Tous droits réservés.</p>
+    <nav>
+        <ul>
+            <li><a id="to-contact" href="mailto:ardy.ockandji@edu.univ-fcomte.fr" target="_blank"><i class="fa-solid fa-paper-plane"></i> Par mail</a></li>
+            <li><a href="https://www.linkedin.com/in/ardy-ockandji-111792262" target="_blank"><i class="fa-brands fa-linkedin fa-user"></i> Mon Profil</a></li>
+            <li><a href="https://github.com/great-pvst" target="_blank"><i class="fa-brands fa-github"></i> Mon Git</a></li>
+        </ul>
+    </nav>
+</footer> 

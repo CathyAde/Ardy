@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <%- include('partials/header') %>  <!-- Inclusion du header ici -->
-
+    <%- include('partials/header') %>
     <main>
         <h1>Bienvenue sur mon site personnel</h1>
-        <p>Je suis [Ton Nom], ...</p>
-        <img src="/images/ton_image.jpg" alt="Photo de moi" class="profile-pic">
-    </main>
+        <section class="paragraphe-accueil">
+            <div class="paragraphe-accueil-txt">
+                <p>
+                    Je suis Ardy OCKANDJI, étudiant international en BUT3 Réseaux & Télécoms parcours Cybersécurité.<br>
+                    Mon expérience dans un cybercafé a suscité mon envie d'évoluer dans un domaine particulier de l'Informatique et je pense que c'est un domaine transveral
+                    de ce grand univers. En effet, j'ai encore plus découvert le fonctionnement des réseaux Informatiques : de la conception à la mise en service en passant par 
+                    la phase de configuration incluant des tests. Étant admiratif de la physique, les Télécoms sont la combinaison idéale à mes yeux car elles définissent
+                    comment transmettre l'information sur différents supports.<br>
+                    Dans le souci d'assurer une sécurité des installations et même l'intégrité des communications, je me suis penché sur la sécurité des 
+                    réseaux. La Cybersécurité me permet, dans ce sens, de garantir (et de rechercher d'ailleurs) la disponibilité des services, l'intégrité et la 
+                    confidentialité des données en configurant les réseaux. Mais c'est un domaine beaucoup plus vaste que cela !<br><br>
+                    En plus des compétences scientifiques et techniques, le BUT R&T me procure les savoir-être, l’éthique, la capacité à travailler en équipe dans un 
+                    environnement international et la compréhension des enjeux des technologies modernes.<br>
+                </p>
+            </div>
+        </section>
+        <img src="IMG_5539-FR.jpg" alt="Photo de moi" class="profile-pic">
 
-    <%- include('partials/footer') %>  <!-- Inclusion du footer ici -->
+        <section>
+            <h1>Petite vidéo illustrative du BUT R&T</h1>
+            <div class="video-container">        
+                <video id="myVideo" class="video" controls>
+                <source src="video .mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>        
+    <%- include('partials/footer') %> 
 </body>
 </html>

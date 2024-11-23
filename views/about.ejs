@@ -11,23 +11,59 @@
     <%- include('partials/header') %>
     <main>
         <h1>À propos de moi</h1>
-        <div class="form-section">
             <div class="form-item">
                 <i class="fas fa-graduation-cap"></i>
                 <h3>Études</h3>
-                <p>Description de vos études.</p>
+                <div class="paragraphe-about-etudes">
+                    <h4 class="about-h4">
+                        BUT Réseaux & Télécoms - IUT Nord Franche-Comté 2022-2025
+                    </h4>
+                    <p>
+                        Le BUT R&T forme en trois ans des professionnels en réseaux et télécommunications, cadres intermédiaires de leur organisation, capables de comprendre, 
+                        de mettre en œuvre, de configurer et de maintenir des équipements et systèmes d’informations, tout en assurant leur sécurité physique et logicielle.
+                    </p>
+                    <h4 class="about-h4">
+                        Bac général, spécialité SVT & Physique-Chimie 2021
+                    </h4>
+                </div>
             </div>
-            <div class="form-item">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Compétences</h3>
-                <p>Description de vos compétences.</p>
+
+            <i class="fas fa-laptop-code"></i>
+            <h3>Compétences</h3>
+            <div class="form-item-container">    
+                <div class="container">
+                    <div class="paragraph">
+                        <h4>Hardskills</h4>
+                        <h5>
+                            <ul>
+                                <li>Langages informatiques<br>Essentiellement du scripting (Bash, C, Python)</li>
+                                <li>Administrer les réseaux et l'Internet : Debian, Windows Server, Routage, services réseaux</li>
+                                <li>Gestion des équipements et sytèmes de communications : ToIP, Asterisk, CME, PABX</li>
+                                <li>Sécuriser et surveiller : ACL, Filtrage, IDS/IPS </li>
+                            </ul>
+                        </h5>
+                    </div>
+
+                    <div class="paragraph">
+                        <h4>Softskills</h4>
+                        <h5>
+                            <ul>
+                                <li>Optimisme</li>
+                                <li>Rigueur</li>
+                                <li>Polyvalence</li>
+                                <li>Travail d'équipe</li>
+                            </ul>
+                        </h5>
+                    </div>
+                </div>
             </div>
-            <div class="form-item">
-                <i class="fas fa-heart"></i>
-                <h3>Passions</h3>
-                <p>Description de vos passions.</p>
+            <br>
+            <div class="cv">
+                <h2>Mon CV</h2>
+                <div style="position: relative; width: 100%; height: 600px;">
+                    <iframe src="ardy_ockandji_cv.pdf" width="100%" height="600px" style="border: none;"></iframe>
+                </div>
             </div>
-        </div>
     </main>
     <%- include('partials/footer') %>
 </body>

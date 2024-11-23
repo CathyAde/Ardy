@@ -1,0 +1,275 @@
+<!-- views/competences.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <section>
+            <h2>Projets Réalisés</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="project1/reseau-infra.png" alt="Projet 1">
+                    <h3>Construire un réseau informatique</h3>
+                    <p>
+                        Le professionnel R&T peut être sollicité pour construire et mettre en place le réseau informatique d’une entreprise (petite ou grande) 
+                        multi-sites. Lors de ce projet, nous avons répondu aux besoins de <strong>commutation</strong>, de <strong>routage</strong>, de 
+                        <strong>services réseaux de base et de sécurité</strong> formulés pour une structure. Ce réseau s’appuie sur des équipements et des services 
+                        informatiques incontournables mais fondamentaux pour fournir à la structure un réseau fonctionnel et structuré.
+                    </p>
+                    <button class="btn" data-popup="popup1">Voir Plus</button>
+                </div>
+
+                <div id="popup1" class="popup">
+                   <div class="popup-content">
+                        <button class="close-btn" data-close>&times;</button>
+                        <h2>Construire un réseau informatique</h2>
+                        <div class="text-truncate">
+                            <p>
+                                Le professionnel R&T peut être sollicité pour construire et mettre en place le réseau informatique d’une entreprise (petite ou grande) 
+                                multi-sites. Lors de ce projet, nous avons répondu aux besoins de <strong>commutation</strong>, de <strong>routage</strong>, de 
+                                <strong>services réseaux de base et de sécurité</strong> formulés pour une structure. Ce réseau s’appuie sur des équipements et des services 
+                                informatiques incontournables mais fondamentaux pour fournir à la structure un réseau fonctionnel et structuré.
+                            </p>
+                            <p>
+                                Ce projet reflète la société d'aujourd'hui avec des mini-stations ou simplement des objets communicants.<br>
+                                Ainsi, un équipement n'a pas nécessairement besoin d'avoir son système préinstallé car il peut, à chaque demarrage, aller récupérer son OS (celui qui lui est assigné).<br>
+
+                                On en voit tout de suite l'utilité les transports en commun (terminal de validation de tickets) ou les caisses libre-accès dans les magasins.
+                            </p>
+                            <p style="text-align: center;"> Voici quelques traces de réalisation de ce projet :
+                                <ul>
+                                    <li>Voici notre plan d'adressage IP (Une étape nécessaire avant toute configuration) : 
+                                        <a href="project1/plan-IP.pdf" target="_parent">Plan IP</a></li><br>
+                                    <li>Une simulation de notre réseau avant la production : 
+                                        <a href="project1/simulation.pkt" target="_parent" download>Fichier Packet Tracer</a>
+                                        <a href="project1/Rapports_projet_MindView.html" target="_blank">Gestion des tâches du projet</a></li><br>
+                                    <li>Notre vidéo montrant une station diskless (Raspberry Pi) démarrant sur le réseau : 
+                                        <a href="https://youtu.be/oT1OobBxz44" target="_blank">Vidéo Raspberry PXE</a>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="project2/infra.png" alt="Projet 2">
+                    <h3>Sécuriser un système d'information</h3>
+                    <div class="text-truncate">
+                        <p>
+                            Ce projet consistait à procéder à la sécurisation des équipements et des services. On se devait de :
+                            <ul>
+                                <li>sécuriser une infrastructure locale existante en commençant par les éléments actifs de couches supérieures à 3, pour finir par les 
+                                différents services proposés ;</li>
+                                <li>ajouter des équipements spécialisés (Pare-feu, IDS, IPS, etc.) ;</li>
+                                <li>utiliser des outils cryptographiques judicieusement choisis pour sécuriser les services ;</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <button class="btn" data-popup="popup2">Voir Plus</button>
+                </div>
+        
+                <div id="popup2" class="popup">
+                   <div class="popup-content">
+                        <button class="close-btn" data-close>&times;</button>
+                        <h2>Sécuriser un système d'information</h2>
+                        <div class="text-truncate">
+                            <p>
+                                Ce projet consistait à procéder à la sécurisation des équipements et des services. On a pu :
+                                <ul>
+                                    <li>sécuriser une infrastructure locale existante en commençant par les éléments actifs de couches supérieures à 3, pour finir par les 
+                                    différents services proposés ;</li>
+                                    <li>ajouter des équipements spécialisés (Pare-feu, IDS, IPS, etc.) ;</li>
+                                    <li>utiliser des outils cryptographiques judicieusement choisis pour sécuriser les services ;</li>
+                                </ul>
+                            </p>
+                            <p>
+                                Comment mentionné, nous sommes partis d'une infrastructure que nous avions déjà réalisée. Vous pouvez visualiser cette infrastructure
+                                <a href="project2/Reseau_Gabin.png"><img class="img-mini" src="project2/Reseau_Gabin.png" 
+                                    alt="Infrastructure du réseau" title="Réseau existant"></a>
+                            </p>
+                            
+                            <p style="text-align: center;"> Voici quelques traces de réalisation de ce projet :
+                                <ul>
+                                    <li>Une image des règles de filtage configurées : 
+                                        <a href="project2/regle-fw.png"><img class="img-mini" src="project2/regle-fw.png" 
+                                        alt="Règles de filtage" title="Filtrage des flux"></a></li><br>
+                                    <li>Quelques solutions pour sécuriser le réseau local : 
+                                        <a href="project2/solutions-securisation-lan.pdf" target="_blank">Solutions de sécurisation LAN</a></li><br>
+                                    <li>Deux rapports des services installés : 
+                                        <a href="project2/services.pdf" target="_blank">Services réseaux</a>
+                                        <a href="project2/sso-authentication.pdf" target="_blank">Authentification SSO</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="project3/infra-reseau-v2.png" alt="Projet 3">
+                    <h3>Cycle de vie d'un projet</h3>
+                    <p>
+                        Un projet informatique nécessite une répartition de tâches entre les membres de l’équipe et nous avons travaillé en méthode Agile 
+                        afin d'assurer le cycle de vie du projet informatique notamment en :
+                        <ul>
+                            <li>Rédigeant le cahier des charges en spécifiant les attentes/contraintes fonctionnelles et techniques</li>
+                            <li>Prévoyant les procédures de tests unitaires et qualification tout au long du développement</li>
+                            <li>Produisant une documentation technique pour la maintenance et l’évolution de l’application</li>
+                        </ul>
+                    </p>
+                    <button class="btn" data-popup="popup3">Voir Plus</button>
+                </div>
+
+                <div id="popup3" class="popup">
+                   <div class="popup-content">
+                        <button class="close-btn" data-close>&times;</button>
+                        <h2>Cycle de vie d'un projet</h2>
+                        <div class="text-truncate">
+                            <p>
+                                Un projet informatique nécessite une répartition de tâches entre les membres de l’équipe et nous avons travaillé en méthode Agile 
+                                afin d'assurer le cycle de vie du projet informatique notamment en :
+                                <ul>
+                                    <li>Rédigeant le cahier des charges en spécifiant les attentes/contraintes fonctionnelles et techniques</li>
+                                    <li>Prévoyant les procédures de tests unitaires et qualification tout au long du développement</li>
+                                    <li>Produisant une documentation technique pour la maintenance et l’évolution de l’application</li>
+                                </ul>
+                            </p>
+                            <mark><strong> Contexte : Ce projet consistait à déployer un hôpital de campagne, en cas d'urgence.</strong></mark><br>
+                            <p>
+                                L’Hôpital Public Belfort-Montbéliard souhaite mettre en place un système informatique afin <strong>d’utiliser des outils informatiques pour automatiser les processus, faciliter la communication, 
+                                stocker et sécuriser les données médicales</strong>. Aussi, <strong>assurer un accès plus rapide à l'information.</strong>
+                                
+                            </p>
+                            <p style="text-align: center;"> Voici quelques traces de réalisation de ce projet :
+                                <ul>
+                                    <li>Un cahier des charges versionné pour s'adapter aux attentes : 
+                                        <a href="project3/CahierDesChargesV1.pdf" target="_blank">Cahier des charges V1</a>
+                                        <a href="project3/CahierDesChargesV2.pdf" target="_blank">Cahier des charges V2</a><br><br>
+                                        Mais aussi une adaptabilité et une réactivité afin de répondre aux besoins :
+                                        <a href="project3/infra-reseau-v1.png" target="_blank">Infrastructure Réseau 1</a>
+                                        <a href="project3/infra-reseau-v2.png" target="_blank">Infrastructure Réseau 2</a><br><br>
+                                        Enfin une communication coontinue et une coordination sont la clé pour mener à bien le projet :
+                                        <a href="project3/discord.png" target="_blank">Communication sur les actions réalisées (image discord)</a>
+                                        <a href="project3/trello.png" target="_blank">Suivi des tâches (image trello)</a></li><br>
+                                    <li>La réalisation des tests unitaires en dévéloppement :
+                                        <a href="https://drive.google.com/drive/folders/12LkXWmskp61ogvGc8gNR--pTznuOSzBy?usp=sharing" target="_blank">
+                                            Les tests unitaires (bon visionnage) :)</a></li><br>
+                                    <li>Ici un petit visuel de la documentation produite : 
+                                        <a href="project3/DocNextcloud.pdf" target="_blank">Documentation Nextcloud</a>
+                                        <a href="project3/FicheTechNextCloud.pdf" target="_blank">Fiche sur le service Nextcloud</a>
+                                        <a href="project3/PRI.pdf" target="_blank">Plan de Réponse à Incident</a><br><br>
+                                        Il est aussi agréable d'automatiser certaines opérations : 
+                                        <a href="project3/script_user.txt" target="_blank">Script de création d'utilisateurs</a></li>
+                                </ul>
+                            </p>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technologies</h2>
+            <p>
+                <h3>Réseaux locaux (LAN), Protocoles de routage et IP</h3>
+                <ul>
+                    <li>Routage inter-VLAN</li>
+                    <li>STP, VTP</li>
+                    <li>Ethernet, PoE (Power over Ethernet)</li>
+                    <li>IPv4 & IPv6</li>
+                    <li>RIP, OSPF,BGP</li>
+                    <li>NAT & PAT</li>
+                </ul>
+            </p>
+
+            <p>
+                <h3>Réseaux étendus (WAN) et interconnexion</h3>
+                <ul>
+                    <li>MPLS, VPN (IPsec, SSL), VRRP</li>
+                    <li>SDH/SONET, WDM/OTN (Wavelength Division Multiplexing/Optical Transport Network), GPON</li>
+                    <li>Faisceaux hertziens, xDSL, FTTx</li>
+                </ul>
+            </p>
+            
+            <p>
+                <h3>Réseaux sans fil, Télécommunications et transmission de données</h3>
+                <ul>
+                    <li>Wi-Fi, Point d'accès, Réseaux cellulaires (GSM, UMTS, HSPA, LTE, 5G) , Transmission radio (AM, FM)</li>
+                    <li> Modulations numériques (ASK, FSK, PSK, QAM), TDM (Time Division Multiplexing), ATM (Asynchronous Transfer Mode)</li>
+                    <li>Antennes de transmission, OFDM (Orthogonal Frequency Division Multiplexing), MIMO (Multiple-Input Multiple-Output)</li>
+                </ul>
+            </p>
+        
+            <p>
+                <h3>Services réseau, supervision, sécurité réseau et gestion des accès </h3>
+                <ul>
+                    <li>DHCPv4&6, SLAAC (Stateless Address Autoconfiguration), DNS, NTP, SMTP/IMAP/POP, FTP</li>
+                    <li>LDAP (Active Directory, OpenLDAP), Nextcloud, ToIP (Telephony over IP)</li>
+                    <li>SNMP, MRTG (Multi Router Traffic Grapher), Cacti, TCPDump, Wireshark, Analyse des signaux</li>
+                    <li>PKI, Certificats, SSL/TLS</li>
+                    <li>RADIUS , SSO (Single Sign-On), Portail captif</li>
+                    <li>Metasploit, Scapy</li>
+                </ul>
+            </p>
+            
+            <p>
+                <h3>Outils et environnements virtualisés</h3>
+                <ul>
+                    <li>Proxmox, VirtualBox, Docker</li>
+                    <li>Linux (Debian, Ubuntu, Kali), Windows Server (2019, 2022)</li>
+                </ul>                
+            </p>
+
+            <p>
+                <h3>Bases de données et données structurées</h3>
+                <ul>
+                    <li>MySQL, MariaDB, HFSQL</li>
+                    <li>CSV, JSON</li>
+                </ul>
+            
+            </p>
+        </section>
+        <section>
+            <h2>Veille Technologique</h2>
+            <p>
+                <h3>Actualités et partages</h3>
+                <a href="https://www.networkworld.com" target="_blank">Network world</a>
+                <a href="https://www.Telecoms.com" target="_blank">Telcoms</a>
+                <a href="https://cve.mitre.org/" target="_blank">CVE dico</a>
+                
+                <h3>Livres et presse</h3>
+                <a href="https://www.ciscopress.com/" target="_blank>">Cisco Press</a>
+                <a href="https://www.techtarget.com/press-release/" target="_blank">Tech Target</a>
+
+                <h3>Communautés</h3>
+                <a href="https://www.reddit.com/r/networking/" target="_blank">Reddit Networking</a> <a href="https://www.reddit.com/r/cybersecurity/ " target="_blank">Reddit Cybersecurity</a>
+                <a href="https://www.reddit.com/r/Linux " target="_blank">Reddit Linux</a> <a href="https://www.reddit.com/r/Database" target="_blank">Reddit Database</a>
+                <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> <a href="https://www.asterisk.org/community/" target="_blank">Asterisk</a>
+                    
+                <h3>Standards et tendances</h3>
+                <a href="https://www.ieee.org/" target="_blank">IEEE</a> <a href="https://www.ietf.org/" target="_blank">IETF</a>
+                <a href="https://www.3gpp.org/" target="_blank">3GPP</a> <a href="https://www.wi-fi.org/" target="_blank">Wi-Fi Alliance</a> 
+                <a href="https://www.iso.org/fr/standards.html" target="_blank">ISO</a> <a href="https://www.anfr.fr/liste-actualites" target="_blank">ANFR</a> 
+                <a href="https://cyber.gouv.fr/publications" target="_blank">ANSSI</a>
+                    
+                <h3>Tutos, astuces et formations</h3>
+                <a href="https://www.it-connect.fr/actualites/" target="_blank">IT-Connect</a> <a href="https://www.netacad.com/fr/" target="_blank">Cisco NetAcad</a>
+                <a href="https://openclassrooms.com/fr/" target="_blank">OpenClassrooms</a> <a href="https://www.root-me.org/?lang=fr" target="_blank">Root-Me</a>
+                <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            </p>
+            
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

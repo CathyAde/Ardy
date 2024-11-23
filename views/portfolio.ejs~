@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <section>
+            <h1>Portfolio</h1>
+        </section>
+<!--  -->
+        <section>
+            <h2>Projets Réalisés</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="" alt="Projet 1">
+                    <h3>Construire un réseau informatique</h3>
+                    <p>
+                        Le professionnel R&T peut être sollicité pour construire et mettre en place le réseau informatique d’une entreprise (petite ou grande) 
+                        multi-sites. Lors de ce projet, nous avons répondu aux besoins de <strong>commutation</strong>, de <strong>routage</strong>, de 
+                        <strong>services réseaux de base et de sécurité</strong> formulés pour une structure. Ce réseau s’appuie sur des équipements et des services 
+                        informatiques incontournables mais fondamentaux pour fournir à la structure un réseau fonctionnel et structuré.
+                    </p>
+                    <a href="#" id="btn" class="btn">Voir Plus</a>
+                </div>
+                <div class="project-card">
+                    <img src="/project2/sae33/Reseau_Gabin.png" alt="Projet 2">
+                    <h3>Sécuriser un système d'information</h3>
+                    <p>
+                        Ce projet consistait à procéder à la sécurisation des équipements et des services. On se devait de :
+                        <ul>
+                            <li>sécuriser une infrastructure locale existante en commençant par les éléments actifs de couches supérieures à 3, pour finir par les 
+                                différents services proposés ;</li>
+                            <li>ajouter des équipements spécialisés (Pare-feu, IDS, IPS, etc.) ;</li>
+                            <li>utiliser des outils cryptographiques judicieusement choisis pour sécuriser les services ;</li>
+                        </ul>
+                    </p>
+                    <a href="#" id="btn" class="btn">Voir Plus</a>
+                </div>
+                <div class="project-card">
+                    <img src="/images/projet3.jpg" alt="Projet 3">
+                    <h3>Cycle de vie d'un projet</h3>
+                    <p>
+                        Un projet informatique nécessite une répartition de tâches entre les membres de l’équipe et nous avons travaillé en méthode Agile 
+                        afin d'assurer le cycle de vie du projet informatique notamment en :
+                        <ul>
+                            <li>Rédigeant le cahier des charges en spécifiant les attentes/contraintes fonctionnelles et techniques</li>
+                            <!-- <li>Définir la stratégie de mise en production et mettre en place un environnement de travail collaboratif</li> -->
+                            <!-- <li>Découpant le travail pour affecter les tâches entre les membres de l’équipe et gérer des versions</li> -->
+                            <li>Prévoyant les procédures de tests unitaires et qualification tout au long du développement</li>
+                            <li>Produisant une documentation technique pour la maintenance et l’évolution de l’application</li>
+                        </ul>
+                    </p>
+                    <a href="#" id="btn" class="btn">Voir Plus</a>
+                
+                <!-- </div> -->
+                <div class="project-card">
+                    <img src="/project4/datasheet-c78-741988_2.png" alt="Projet 4">
+                    <h3>Mise en place d'un accès sans fil d'entreprise</h3>
+                    <p>
+                        Ce projet m'a été confié lors de mon apprentissage en deuxième année. Pour des besoins de flexibilité lors des divers déplacements du bureau, 
+                        j'ai été amené à travailler sur l'installation d'un accès sans fil. Le réseau sans fil enlève la contrainte de se contenter au même endroit, 
+                        permet de bouger sans tracasseries mais rajoute d'autres problèmes qui ne sont pas visibles.<br>
+                        J'ai donc mené ce projet avec mes connaissances, non seulement techniques mais de gestion de projet également. En effet, il a fallu définir des 
+                        jalons qui faisaient office de deadline où je devais rendre des versions de mon travail et réaliser des tests unitaires des installations.
+                        J'ai mis en place les premières bornes dont un contrôlleur. Les nouvelles bornes viendront uniquement se connecter à ce contrôlleur afin de 
+                        faire du CAPWAP, du LDAP de point d'accès.
+                        C'est ainsi que mon infrastructure répond à un réseau d'entreprise avec un point d'accès central. Ce n'est pas seulement l'aspect topologie ; 
+                        la configuration réseau obéit à la norme 802.1x avec un accès réseau autorisé uniquement aux utlisateurs existants dans le réseau d'infrastructure.
+                    </p>
+                    <a href="#" id="btn" class="btn">Voir Plus</a>
+                </div>
+                <!-- Ajoutez plus de cartes de projet selon vos besoins -->
+            </div>
+        </section>
+        <section>
+            <h2>Technologies</h2>
+            <p>[Liste des technologies que tu maîtrises et celles que tu apprends.]</p>
+        </section>
+    </main>
+
+
+    <%- include('partials/footer') %>
+</body>
+</html>
